@@ -87,8 +87,8 @@ do
 	    PLATFORM="iPhoneSimulator"
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
-	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK}"
-	    export CFLAGS="-Os -Qunused-arguments -arch ${ARCH}"
+	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
+	    export CFLAGS="-Os -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK}"
 	    export LDFLAGS="-arch ${ARCH}"
             ;;
         *)
