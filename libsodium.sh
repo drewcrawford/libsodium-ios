@@ -1,6 +1,9 @@
 #!/bin/sh
 # A script to download and build libsodium for iOS, including arm64
 # Adapted from https://raw2.github.com/seb-m/CryptoPill/master/libsodium.sh
+
+rm -rf libsodium
+set -e
 curl -O -L https://github.com/jedisct1/libsodium/releases/download/0.4.5/libsodium-0.4.5.tar.gz
 tar xzf libsodium-0.4.5.tar.gz
 rm libsodium-0.4.5.tar.gz
@@ -37,7 +40,6 @@ then
     rm -rf $DISTDIR
 fi
 mkdir -p $BUILDDIR $DISTDIR
-make distclean
 
 # Generate autoconf files
 cd ${LIBDIR}; ./autogen.sh
@@ -78,14 +80,14 @@ do
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
-	    export CFLAGS="-Os -m32 -Qunused-arguments -arch ${ARCH}"
+	    export CFLAGS="-Os -m32 -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK}"
 	    export LDFLAGS="-m32 -arch ${ARCH}"
             ;;
         x86_64)
 	    PLATFORM="iPhoneSimulator"
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
-	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
+	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK}"
 	    export CFLAGS="-Os -Qunused-arguments -arch ${ARCH}"
 	    export LDFLAGS="-arch ${ARCH}"
             ;;
