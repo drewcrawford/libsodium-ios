@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A3EE4E818B05F12001A105F /* libsodium.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A3EE4E718B05F12001A105F /* libsodium.a */; };
+		3A3EE51F18B060C7001A105F /* box.exp in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EE51E18B060C7001A105F /* box.exp */; };
+		3A3EE52018B060E6001A105F /* box.exp in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EE51E18B060C7001A105F /* box.exp */; };
+		3A3EE52218B062CA001A105F /* box2.exp in Sources */ = {isa = PBXBuildFile; fileRef = 3A3EE52118B062CA001A105F /* box2.exp */; };
+		3A3EE52318B062D4001A105F /* box2.exp in Resources */ = {isa = PBXBuildFile; fileRef = 3A3EE52118B062CA001A105F /* box2.exp */; };
+		3AAEA11018B05CB600A5E10C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEA10F18B05CB600A5E10C /* XCTest.framework */; };
+		3AAEA11118B05CB600A5E10C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEA10118B05CB600A5E10C /* Foundation.framework */; };
+		3AAEA11318B05CB600A5E10C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AAEA11218B05CB600A5E10C /* UIKit.framework */; };
+		3AAEA11C18B05CB600A5E10C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEA11A18B05CB600A5E10C /* InfoPlist.strings */; };
+		3AAEA11E18B05CB600A5E10C /* LibSodiumTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEA11D18B05CB600A5E10C /* LibSodiumTesterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A3EE4E718B05F12001A105F /* libsodium.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libsodium.a; path = ../libsodium_dist/lib/libsodium.a; sourceTree = "<group>"; };
+		3A3EE4EA18B05F1C001A105F /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
+		3A3EE4EB18B05F1C001A105F /* crypto_auth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_auth.h; sourceTree = "<group>"; };
+		3A3EE4EC18B05F1C001A105F /* crypto_auth_hmacsha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha256.h; sourceTree = "<group>"; };
+		3A3EE4ED18B05F1C001A105F /* crypto_auth_hmacsha512256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_auth_hmacsha512256.h; sourceTree = "<group>"; };
+		3A3EE4EE18B05F1C001A105F /* crypto_box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_box.h; sourceTree = "<group>"; };
+		3A3EE4EF18B05F1C001A105F /* crypto_box_curve25519xsalsa20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_box_curve25519xsalsa20poly1305.h; sourceTree = "<group>"; };
+		3A3EE4F018B05F1C001A105F /* crypto_core_hsalsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_hsalsa20.h; sourceTree = "<group>"; };
+		3A3EE4F118B05F1C001A105F /* crypto_core_salsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa20.h; sourceTree = "<group>"; };
+		3A3EE4F218B05F1C001A105F /* crypto_core_salsa2012.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa2012.h; sourceTree = "<group>"; };
+		3A3EE4F318B05F1C001A105F /* crypto_core_salsa208.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_core_salsa208.h; sourceTree = "<group>"; };
+		3A3EE4F418B05F1C001A105F /* crypto_generichash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_generichash.h; sourceTree = "<group>"; };
+		3A3EE4F518B05F1C001A105F /* crypto_generichash_blake2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_generichash_blake2b.h; sourceTree = "<group>"; };
+		3A3EE4F618B05F1C001A105F /* crypto_hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hash.h; sourceTree = "<group>"; };
+		3A3EE4F718B05F1C001A105F /* crypto_hash_sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hash_sha256.h; sourceTree = "<group>"; };
+		3A3EE4F818B05F1C001A105F /* crypto_hash_sha512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hash_sha512.h; sourceTree = "<group>"; };
+		3A3EE4F918B05F1C001A105F /* crypto_hashblocks_sha256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hashblocks_sha256.h; sourceTree = "<group>"; };
+		3A3EE4FA18B05F1C001A105F /* crypto_hashblocks_sha512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_hashblocks_sha512.h; sourceTree = "<group>"; };
+		3A3EE4FB18B05F1C001A105F /* crypto_int32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_int32.h; sourceTree = "<group>"; };
+		3A3EE4FC18B05F1C001A105F /* crypto_int64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_int64.h; sourceTree = "<group>"; };
+		3A3EE4FD18B05F1C001A105F /* crypto_onetimeauth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth.h; sourceTree = "<group>"; };
+		3A3EE4FE18B05F1C001A105F /* crypto_onetimeauth_poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth_poly1305.h; sourceTree = "<group>"; };
+		3A3EE4FF18B05F1C001A105F /* crypto_onetimeauth_poly1305_53.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth_poly1305_53.h; sourceTree = "<group>"; };
+		3A3EE50018B05F1C001A105F /* crypto_onetimeauth_poly1305_donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_onetimeauth_poly1305_donna.h; sourceTree = "<group>"; };
+		3A3EE50118B05F1C001A105F /* crypto_scalarmult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scalarmult.h; sourceTree = "<group>"; };
+		3A3EE50218B05F1C001A105F /* crypto_scalarmult_curve25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_scalarmult_curve25519.h; sourceTree = "<group>"; };
+		3A3EE50318B05F1C001A105F /* crypto_secretbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_secretbox.h; sourceTree = "<group>"; };
+		3A3EE50418B05F1C001A105F /* crypto_secretbox_xsalsa20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_secretbox_xsalsa20poly1305.h; sourceTree = "<group>"; };
+		3A3EE50518B05F1C001A105F /* crypto_shorthash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_shorthash.h; sourceTree = "<group>"; };
+		3A3EE50618B05F1C001A105F /* crypto_shorthash_siphash24.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_shorthash_siphash24.h; sourceTree = "<group>"; };
+		3A3EE50718B05F1C001A105F /* crypto_sign.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_sign.h; sourceTree = "<group>"; };
+		3A3EE50818B05F1C001A105F /* crypto_sign_ed25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_sign_ed25519.h; sourceTree = "<group>"; };
+		3A3EE50918B05F1C001A105F /* crypto_sign_edwards25519sha512batch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_sign_edwards25519sha512batch.h; sourceTree = "<group>"; };
+		3A3EE50A18B05F1C001A105F /* crypto_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream.h; sourceTree = "<group>"; };
+		3A3EE50B18B05F1C001A105F /* crypto_stream_aes128ctr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_aes128ctr.h; sourceTree = "<group>"; };
+		3A3EE50C18B05F1C001A105F /* crypto_stream_aes256estream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_aes256estream.h; sourceTree = "<group>"; };
+		3A3EE50D18B05F1C001A105F /* crypto_stream_salsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa20.h; sourceTree = "<group>"; };
+		3A3EE50E18B05F1C001A105F /* crypto_stream_salsa2012.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa2012.h; sourceTree = "<group>"; };
+		3A3EE50F18B05F1C001A105F /* crypto_stream_salsa208.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_salsa208.h; sourceTree = "<group>"; };
+		3A3EE51018B05F1C001A105F /* crypto_stream_xsalsa20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_xsalsa20.h; sourceTree = "<group>"; };
+		3A3EE51118B05F1C001A105F /* crypto_uint16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_uint16.h; sourceTree = "<group>"; };
+		3A3EE51218B05F1C001A105F /* crypto_uint32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_uint32.h; sourceTree = "<group>"; };
+		3A3EE51318B05F1C001A105F /* crypto_uint64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_uint64.h; sourceTree = "<group>"; };
+		3A3EE51418B05F1C001A105F /* crypto_uint8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_uint8.h; sourceTree = "<group>"; };
+		3A3EE51518B05F1C001A105F /* crypto_verify_16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_verify_16.h; sourceTree = "<group>"; };
+		3A3EE51618B05F1C001A105F /* crypto_verify_32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_verify_32.h; sourceTree = "<group>"; };
+		3A3EE51718B05F1C001A105F /* export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
+		3A3EE51818B05F1C001A105F /* randombytes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randombytes.h; sourceTree = "<group>"; };
+		3A3EE51918B05F1C001A105F /* randombytes_salsa20_random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randombytes_salsa20_random.h; sourceTree = "<group>"; };
+		3A3EE51A18B05F1C001A105F /* randombytes_sysrandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = randombytes_sysrandom.h; sourceTree = "<group>"; };
+		3A3EE51B18B05F1C001A105F /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		3A3EE51C18B05F1C001A105F /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		3A3EE51D18B05F1C001A105F /* sodium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sodium.h; path = ../libsodium_dist/include/sodium.h; sourceTree = "<group>"; };
+		3A3EE51E18B060C7001A105F /* box.exp */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; name = box.exp; path = ../../libsodium/test/default/box.exp; sourceTree = "<group>"; };
+		3A3EE52118B062CA001A105F /* box2.exp */ = {isa = PBXFileReference; explicitFileType = text; fileEncoding = 4; name = box2.exp; path = ../../libsodium/test/default/box2.exp; sourceTree = "<group>"; };
+		3AAEA10118B05CB600A5E10C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AAEA10518B05CB600A5E10C /* LibSodiumTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LibSodiumTester-Prefix.pch"; sourceTree = "<group>"; };
+		3AAEA10618B05CB600A5E10C /* LibSodiumTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LibSodiumTester.h; sourceTree = "<group>"; };
+		3AAEA10818B05CB600A5E10C /* LibSodiumTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibSodiumTester.m; sourceTree = "<group>"; };
+		3AAEA10E18B05CB600A5E10C /* LibSodiumTesterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibSodiumTesterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AAEA10F18B05CB600A5E10C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3AAEA11218B05CB600A5E10C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3AAEA11918B05CB600A5E10C /* LibSodiumTesterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LibSodiumTesterTests-Info.plist"; sourceTree = "<group>"; };
+		3AAEA11B18B05CB600A5E10C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AAEA11D18B05CB600A5E10C /* LibSodiumTesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LibSodiumTesterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AAEA10B18B05CB600A5E10C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEA11018B05CB600A5E10C /* XCTest.framework in Frameworks */,
+				3AAEA11318B05CB600A5E10C /* UIKit.framework in Frameworks */,
+				3A3EE4E818B05F12001A105F /* libsodium.a in Frameworks */,
+				3AAEA11118B05CB600A5E10C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A3EE4E918B05F1C001A105F /* sodium */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EE4EA18B05F1C001A105F /* core.h */,
+				3A3EE4EB18B05F1C001A105F /* crypto_auth.h */,
+				3A3EE4EC18B05F1C001A105F /* crypto_auth_hmacsha256.h */,
+				3A3EE4ED18B05F1C001A105F /* crypto_auth_hmacsha512256.h */,
+				3A3EE4EE18B05F1C001A105F /* crypto_box.h */,
+				3A3EE4EF18B05F1C001A105F /* crypto_box_curve25519xsalsa20poly1305.h */,
+				3A3EE4F018B05F1C001A105F /* crypto_core_hsalsa20.h */,
+				3A3EE4F118B05F1C001A105F /* crypto_core_salsa20.h */,
+				3A3EE4F218B05F1C001A105F /* crypto_core_salsa2012.h */,
+				3A3EE4F318B05F1C001A105F /* crypto_core_salsa208.h */,
+				3A3EE4F418B05F1C001A105F /* crypto_generichash.h */,
+				3A3EE4F518B05F1C001A105F /* crypto_generichash_blake2b.h */,
+				3A3EE4F618B05F1C001A105F /* crypto_hash.h */,
+				3A3EE4F718B05F1C001A105F /* crypto_hash_sha256.h */,
+				3A3EE4F818B05F1C001A105F /* crypto_hash_sha512.h */,
+				3A3EE4F918B05F1C001A105F /* crypto_hashblocks_sha256.h */,
+				3A3EE4FA18B05F1C001A105F /* crypto_hashblocks_sha512.h */,
+				3A3EE4FB18B05F1C001A105F /* crypto_int32.h */,
+				3A3EE4FC18B05F1C001A105F /* crypto_int64.h */,
+				3A3EE4FD18B05F1C001A105F /* crypto_onetimeauth.h */,
+				3A3EE4FE18B05F1C001A105F /* crypto_onetimeauth_poly1305.h */,
+				3A3EE4FF18B05F1C001A105F /* crypto_onetimeauth_poly1305_53.h */,
+				3A3EE50018B05F1C001A105F /* crypto_onetimeauth_poly1305_donna.h */,
+				3A3EE50118B05F1C001A105F /* crypto_scalarmult.h */,
+				3A3EE50218B05F1C001A105F /* crypto_scalarmult_curve25519.h */,
+				3A3EE50318B05F1C001A105F /* crypto_secretbox.h */,
+				3A3EE50418B05F1C001A105F /* crypto_secretbox_xsalsa20poly1305.h */,
+				3A3EE50518B05F1C001A105F /* crypto_shorthash.h */,
+				3A3EE50618B05F1C001A105F /* crypto_shorthash_siphash24.h */,
+				3A3EE50718B05F1C001A105F /* crypto_sign.h */,
+				3A3EE50818B05F1C001A105F /* crypto_sign_ed25519.h */,
+				3A3EE50918B05F1C001A105F /* crypto_sign_edwards25519sha512batch.h */,
+				3A3EE50A18B05F1C001A105F /* crypto_stream.h */,
+				3A3EE50B18B05F1C001A105F /* crypto_stream_aes128ctr.h */,
+				3A3EE50C18B05F1C001A105F /* crypto_stream_aes256estream.h */,
+				3A3EE50D18B05F1C001A105F /* crypto_stream_salsa20.h */,
+				3A3EE50E18B05F1C001A105F /* crypto_stream_salsa2012.h */,
+				3A3EE50F18B05F1C001A105F /* crypto_stream_salsa208.h */,
+				3A3EE51018B05F1C001A105F /* crypto_stream_xsalsa20.h */,
+				3A3EE51118B05F1C001A105F /* crypto_uint16.h */,
+				3A3EE51218B05F1C001A105F /* crypto_uint32.h */,
+				3A3EE51318B05F1C001A105F /* crypto_uint64.h */,
+				3A3EE51418B05F1C001A105F /* crypto_uint8.h */,
+				3A3EE51518B05F1C001A105F /* crypto_verify_16.h */,
+				3A3EE51618B05F1C001A105F /* crypto_verify_32.h */,
+				3A3EE51718B05F1C001A105F /* export.h */,
+				3A3EE51818B05F1C001A105F /* randombytes.h */,
+				3A3EE51918B05F1C001A105F /* randombytes_salsa20_random.h */,
+				3A3EE51A18B05F1C001A105F /* randombytes_sysrandom.h */,
+				3A3EE51B18B05F1C001A105F /* utils.h */,
+				3A3EE51C18B05F1C001A105F /* version.h */,
+			);
+			name = sodium;
+			path = ../libsodium_dist/include/sodium;
+			sourceTree = "<group>";
+		};
+		3AAEA0F518B05CB500A5E10C = {
+			isa = PBXGroup;
+			children = (
+				3AAEA10318B05CB600A5E10C /* LibSodiumTester */,
+				3AAEA11718B05CB600A5E10C /* LibSodiumTesterTests */,
+				3AAEA10018B05CB500A5E10C /* Frameworks */,
+				3AAEA0FF18B05CB500A5E10C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3AAEA0FF18B05CB500A5E10C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEA10E18B05CB600A5E10C /* LibSodiumTesterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AAEA10018B05CB500A5E10C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EE4E918B05F1C001A105F /* sodium */,
+				3A3EE51D18B05F1C001A105F /* sodium.h */,
+				3A3EE4E718B05F12001A105F /* libsodium.a */,
+				3AAEA10118B05CB600A5E10C /* Foundation.framework */,
+				3AAEA10F18B05CB600A5E10C /* XCTest.framework */,
+				3AAEA11218B05CB600A5E10C /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AAEA10318B05CB600A5E10C /* LibSodiumTester */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEA10618B05CB600A5E10C /* LibSodiumTester.h */,
+				3AAEA10818B05CB600A5E10C /* LibSodiumTester.m */,
+				3AAEA10418B05CB600A5E10C /* Supporting Files */,
+			);
+			path = LibSodiumTester;
+			sourceTree = "<group>";
+		};
+		3AAEA10418B05CB600A5E10C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEA10518B05CB600A5E10C /* LibSodiumTester-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AAEA11718B05CB600A5E10C /* LibSodiumTesterTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A3EE52118B062CA001A105F /* box2.exp */,
+				3A3EE51E18B060C7001A105F /* box.exp */,
+				3AAEA11D18B05CB600A5E10C /* LibSodiumTesterTests.m */,
+				3AAEA11818B05CB600A5E10C /* Supporting Files */,
+			);
+			path = LibSodiumTesterTests;
+			sourceTree = "<group>";
+		};
+		3AAEA11818B05CB600A5E10C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AAEA11918B05CB600A5E10C /* LibSodiumTesterTests-Info.plist */,
+				3AAEA11A18B05CB600A5E10C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AAEA10D18B05CB600A5E10C /* LibSodiumTesterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AAEA12418B05CB600A5E10C /* Build configuration list for PBXNativeTarget "LibSodiumTesterTests" */;
+			buildPhases = (
+				3AAEA10A18B05CB600A5E10C /* Sources */,
+				3AAEA10B18B05CB600A5E10C /* Frameworks */,
+				3AAEA10C18B05CB600A5E10C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibSodiumTesterTests;
+			productName = LibSodiumTesterTests;
+			productReference = 3AAEA10E18B05CB600A5E10C /* LibSodiumTesterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AAEA0F618B05CB500A5E10C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = DrewCrawfordApps;
+			};
+			buildConfigurationList = 3AAEA0F918B05CB500A5E10C /* Build configuration list for PBXProject "LibSodiumTester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3AAEA0F518B05CB500A5E10C;
+			productRefGroup = 3AAEA0FF18B05CB500A5E10C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AAEA10D18B05CB600A5E10C /* LibSodiumTesterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AAEA10C18B05CB600A5E10C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A3EE52318B062D4001A105F /* box2.exp in Resources */,
+				3AAEA11C18B05CB600A5E10C /* InfoPlist.strings in Resources */,
+				3A3EE52018B060E6001A105F /* box.exp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AAEA10A18B05CB600A5E10C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AAEA11E18B05CB600A5E10C /* LibSodiumTesterTests.m in Sources */,
+				3A3EE51F18B060C7001A105F /* box.exp in Sources */,
+				3A3EE52218B062CA001A105F /* box2.exp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AAEA11A18B05CB600A5E10C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AAEA11B18B05CB600A5E10C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AAEA11F18B05CB600A5E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../libsodium_dist/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3AAEA12018B05CB600A5E10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../libsodium_dist/include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AAEA12518B05CB600A5E10C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibSodiumTester/LibSodiumTester-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LibSodiumTesterTests/LibSodiumTesterTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/drew/Dropbox/Code/libzmq-ios/libsodium-ios/libsodium_dist/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3AAEA12618B05CB600A5E10C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LibSodiumTester/LibSodiumTester-Prefix.pch";
+				INFOPLIST_FILE = "LibSodiumTesterTests/LibSodiumTesterTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/drew/Dropbox/Code/libzmq-ios/libsodium-ios/libsodium_dist/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AAEA0F918B05CB500A5E10C /* Build configuration list for PBXProject "LibSodiumTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEA11F18B05CB600A5E10C /* Debug */,
+				3AAEA12018B05CB600A5E10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AAEA12418B05CB600A5E10C /* Build configuration list for PBXNativeTarget "LibSodiumTesterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AAEA12518B05CB600A5E10C /* Debug */,
+				3AAEA12618B05CB600A5E10C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AAEA0F618B05CB500A5E10C /* Project object */;
+}
