@@ -29,6 +29,7 @@ SDK=$(xcodebuild -showsdks \
     | grep iphoneos | sort | tail -n 1 | awk '{print substr($NF, 9)}'
     )
 
+OTHER_CFLAGS="-Os -Qunused-arguments"
 
 # Cleanup
 if [ -d $BUILDDIR ]
@@ -56,7 +57,7 @@ do
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
-	    export CFLAGS="-Os -mthumb -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT}"
+	    export CFLAGS="-arch ${ARCH} -isysroot ${ISDKROOT} ${OTHER_CFLAGS}"
 	    export LDFLAGS="-mthumb -arch ${ARCH} -isysroot ${ISDKROOT}"
             ;;
         armv7s)
@@ -64,7 +65,7 @@ do
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
-	    export CFLAGS="-Os -mthumb -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT}"
+	    export CFLAGS="-arch ${ARCH} -isysroot ${ISDKROOT} ${OTHER_CFLAGS}"
 	    export LDFLAGS="-mthumb -arch ${ARCH} -isysroot ${ISDKROOT}"
             ;;
         arm64)
@@ -72,7 +73,7 @@ do
 	    HOST="arm-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
-	    export CFLAGS="-Os -mthumb -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT}"
+	    export CFLAGS="-arch ${ARCH} -isysroot ${ISDKROOT} ${OTHER_CFLAGS}"
 	    export LDFLAGS="-mthumb -arch ${ARCH} -isysroot ${ISDKROOT}"
             ;;
         i386)
@@ -80,7 +81,7 @@ do
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
-	    export CFLAGS="-Os -m32 -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK}"
+	    export CFLAGS="-arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK} ${OTHER_CFLAGS}"
 	    export LDFLAGS="-m32 -arch ${ARCH}"
             ;;
         x86_64)
@@ -88,7 +89,7 @@ do
 	    HOST="${ARCH}-apple-darwin"
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
-	    export CFLAGS="-Os -Qunused-arguments -arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK}"
+	    export CFLAGS="-arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK} ${OTHER_CFLAGS}"
 	    export LDFLAGS="-arch ${ARCH}"
             ;;
         *)
