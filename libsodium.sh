@@ -5,9 +5,9 @@
 rm -rf libsodium
 set -e
 curl -O -L https://github.com/jedisct1/libsodium/releases/download/0.6.1/libsodium-0.6.1.tar.gz
-tar xzf libsodium-0.4.5.tar.gz
-rm libsodium-0.4.5.tar.gz
-mv libsodium-0.4.5 libsodium
+tar xzf libsodium-0.6.1.tar.gz
+rm libsodium-0.6.1.tar.gz
+mv libsodium-0.6.1 libsodium
 
 LIBNAME="libsodium.a"
 ARCHS=${ARCHS:-"armv7 armv7s arm64 i386 x86_64"}
