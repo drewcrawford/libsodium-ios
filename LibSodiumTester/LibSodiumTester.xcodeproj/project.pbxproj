@@ -261,10 +261,11 @@
 			};
 			buildConfigurationList = 3AAEA0F918B05CB500A5E10C /* Build configuration list for PBXProject "LibSodiumTester" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3AAEA0F518B05CB500A5E10C;
 			productRefGroup = 3AAEA0FF18B05CB500A5E10C /* Products */;
