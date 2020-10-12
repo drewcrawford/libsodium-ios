@@ -74,7 +74,7 @@ do
 	    export BASEDIR="${DEVELOPER}/Platforms/${PLATFORM}.platform/Developer"
 	    export ISDKROOT="${BASEDIR}/SDKs/${PLATFORM}${SDK}.sdk"
 	    export CFLAGS="-arch ${ARCH} -isysroot ${ISDKROOT} -miphoneos-version-min=${SDK} ${OTHER_CFLAGS}"
-	    export LDFLAGS="-m32 -arch ${ARCH}"
+	    export LDFLAGS="-arch ${ARCH}"
             ;;
         x86_64)
 	    PLATFORM="iPhoneSimulator"
