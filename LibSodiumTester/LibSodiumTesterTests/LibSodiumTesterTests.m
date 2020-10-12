@@ -3,11 +3,14 @@
 //  LibSodiumTesterTests
 //
 //  Created by Drew Crawford on 2/15/14.
+//  Modified by Joseph Zurowski on 10/11/20
 //  Copyright (c) 2014 DrewCrawfordApps. All rights reserved.
+//  Maintained 2020 Dunkel Web Services LLC. https://dws.llc/
 //
 
 #import <XCTest/XCTest.h>
 #import <sodium.h>
+#include <stdio.h>
 
 @interface LibSodiumTesterTests : XCTestCase
 
@@ -105,8 +108,6 @@
 }
 
 - (void) testBox2 {
-#include <stdio.h>
-    
     NSMutableString *compare1 = [[NSMutableString alloc ] init];
     unsigned char bobsk[32] = {
         0x5d,0xab,0x08,0x7e,0x62,0x4a,0x8a,0x4b
